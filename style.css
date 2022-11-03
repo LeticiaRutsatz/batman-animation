@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+.fundo{
+    position: relative;
+    background-image: url(./imagens/vermelho.jpg);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+.cidade{
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    background-image: url(./imagens/cidade2.png);
+    background-repeat: no-repeat;
+    margin-top: 125px;
+    background-position: center;
+    z-index: 2;
+    animation: cidadeAnimacao 10s linear infinite reverse both;
+}
+
+@keyframes cidadeAnimacao {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    75%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1.4);
+    }
+}
+
+.lua{
+    position: absolute;
+    right: -200px;
+    bottom: 0px;
+    height: 100%;
+    width: 70%;
+    background-image: url(./imagens/lua.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 3;
+    animation: luaAnimacao 8s linear infinite both;
+}
+
+@keyframes luaAnimacao {
+   0%{
+    transform: rotate(0);
+   }
+   100%{
+    transform: rotate(360deg);
+   }
+}
+
+.batman{
+    position: absolute;
+    right: 80px;
+    height: 100%;
+    width: 30%;
+    background-image: url(./imagens/batman.png);
+    background-repeat: no-repeat;
+   background-size: 400px  500px;
+    z-index: 4;
+    animation: batman 7s linear infinite;
+}
+
+@keyframes batman{
+    0%{
+        transform: scale(0);
+        filter: blur(1px);
+    }
+    25%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    75%{
+        transform: scale(3);
+    }
+    100%{
+        transform: scale(3);
+    }
+}
+
+.logo{
+    position: absolute;
+    top: 250px;
+    left: 80px;
+    height: 30%;
+    width: 50%;
+    background-image: url(./imagens/logo.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    z-index: 3;
+    animation: logoAnimado 5s infinite;
+}
+
+@keyframes logoAnimado {
+    from{
+        top: 0px;
+        opacity: 0%;
+    }
+
+    to{
+        top: 250px;
+        opacity: 100%;
+    }
+}
